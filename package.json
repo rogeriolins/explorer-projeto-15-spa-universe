@@ -1,0 +1,15 @@
+{
+  "name": "projeto15-spa-universe",
+  "version": "1.0.0",
+  "description": "SPA Universe (Single Page Application)",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "RocketSeat Coding Rogerio Lins",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
