@@ -4,7 +4,9 @@
 
   --color-title: #e1e1e6;
 
+  --color-button-text: #02799d;
   --color-button: #fff;
+  --color-404: #111;
 
   font-size: 62.5%;
 }
@@ -27,6 +29,18 @@ body {
   height: 100vh;
 }
 
+body.page-theuniverse {
+  background-image: url(./assets/mountains-universe-2.png);
+}
+
+body.page-exploration {
+  background-image: url(./assets/mountains-universe-3.png);
+}
+
+body.page-404 {
+  background-image: url(./assets/404.jpg);
+}
+
 header {
   display: flex;
   justify-content: left;
@@ -36,6 +50,7 @@ header {
 }
 
 a {
+  font-weight: normal;
   font-size: 2.4rem;
   text-decoration: none;
   color: var(--color-link);
@@ -46,6 +61,11 @@ a:hover {
   opacity: 0.8;
 }
 
+a.visited-current {
+  font-weight: bold;
+  font-size: 2.6rem;
+}
+
 /* Home */
 h1 {
   color: var(--color-title);
@@ -53,7 +73,8 @@ h1 {
   font-size: 4.8rem;
 }
 
-#app #home {
+#app #home,
+#app #page404 {
   margin: 0 auto;
 
   display: grid;
@@ -62,7 +83,8 @@ h1 {
   height: calc(100vh - 31rem);
 }
 
-#home button {
+#home button,
+#app #page404 a {
   margin-top: 2.4rem;
   padding: 1.2rem 3.2rem;
   background-color: transparent;
@@ -81,8 +103,42 @@ h1 {
   cursor: pointer;
 }
 
+#app #page-theuniverse h1,
+#app #page-exploration h1 {
+  color: var(--color-title);
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin-top: 6.3rem;
+  margin-left: 10.2rem;
+}
+
+#app #page-theuniverse p,
+#app #page-exploration p {
+  color: var(--color-title);
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-top: 1.6rem;
+  margin-left: 10.2rem;
+  max-width: 64.8rem;
+  line-height: 160%;
+}
+
 #home button:hover {
-  border: 2px solid var(--color-link-hover);
-  color: var(--color-link-hover);
-  opacity: 0.8;
+  color: var(--color-button-text);
+  background-color: var(--color-button);
+}
+
+#app #page404 h1 {
+  color: var(--color-404);
+}
+
+#app #page404 a {
+  color: var(--color-button404);
+  border: 2px solid var(--color-404);
+}
+
+#app #page404 a:hover {
+  border: 2px solid var(--color-button);
+  color: var(--color-button-text);
+  background-color: var(--color-button);
 }
